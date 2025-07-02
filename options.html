@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linkding Bookmarks Options</title>
+  <link rel="stylesheet" href="options.css">
+  <style>
+    .checkbox-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .checkbox-option input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Linkding Connection Settings</h1>
+  <p class="intro">To connect the extension to your Linkding account, please provide your server's URL and an API token. This is a secure way to grant access without sharing your password.</p>
+  <form id="options-form">
+    <div>
+      <label for="linkding-url">Linkding URL:</label>
+      <input type="url" id="linkding-url" name="linkding-url" placeholder="e.g., https://demo.linkding.link" required>
+    </div>
+    <div>
+      <label for="api-token">API Token:</label>
+      <input type="password" id="api-token" name="api-token" required>
+      <p>You can create and find your API token in your Linkding instance under <strong>Settings → Integrations</strong>.</p>
+    </div>
+    <button type="submit">Save and Connect</button>
+  </form>
+  <div id="status"></div>
+  <script src="options.js"></script>
+
+  <hr>
+
+  <h2>Chrome Bookmarks Bar Sync</h2>
+  <p>Create a folder on your bookmarks bar that mirrors your Linkding bookmarks. Clicking the button will remove the previous sync folder and create a new one.</p>
+  <button id="sync-btn">Sync to Bookmarks Bar</button>
+  <div id="sync-status"></div>
+</body>
+
+  <hr>
+
+  <h2>Display Mode</h2>
+  <p>Choose how you want to access your bookmarks from the toolbar icon.</p>
+  <div id="display-mode-options">
+    <div class="radio-option">
+      <input type="radio" id="mode-popup" name="display-mode" value="popup" checked>
+      <label for="mode-popup">Popup Window</label>
+    </div>
+    <div class="radio-option">
+      <input type="radio" id="mode-sidebar" name="display-mode" value="sidebar">
+      <label for="mode-sidebar">Side Panel</label>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Popup UI Settings</h2>
+  <p>Customize the bookmark list to show or hide advanced features for a cleaner look.</p>
+  <div id="ui-settings">
+      <div class="checkbox-option">
+          <input type="checkbox" id="show-tags" name="show-tags">
+          <label for="show-tags">Show Tags</label>
+      </div>
+      <div class="checkbox-option">
+          <input type="checkbox" id="show-actions" name="show-actions">
+          <label for="show-actions">Show Action Buttons (Edit, Delete, Drag & Drop)</label>
+      </div>
+  </div>
+
+  <hr>
+
+  <h2>Side Panel UI Settings</h2>
+  <p>Customize the side panel bookmark list for a cleaner look.</p>
+  <div id="side-panel-ui-settings">
+      <div class="checkbox-option">
+          <input type="checkbox" id="side-panel-show-tags" name="side-panel-show-tags">
+          <label for="side-panel-show-tags">Show Tags</label>
+      </div>
+      <div class="checkbox-option">
+          <input type="checkbox" id="side-panel-show-actions" name="side-panel-show-actions">
+          <label for="side-panel-show-actions">Show Action Buttons (Edit, Delete, Drag & Drop)</label>
+      </div>
+  </div>
+</html>

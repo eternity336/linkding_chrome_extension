@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Linkding Bookmarks",
+  "version": "1.0.0",
+  "description": "A dropdown for your Linkding bookmarks, sorted by tags.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "bookmarks",
+    "sidePanel",
+    "contextMenus",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/favicon16.png",
+      "48": "icons/favicon48.png",
+      "128": "icons/favicon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/favicon16.png",
+    "48": "icons/favicon48.png",
+    "128": "icons/favicon128.png"
+  },
+  "options_page": "options.html",
+  "author": "TheeOx with the help of Gemini Code Assist",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "side_panel.html"
+  }
+}
